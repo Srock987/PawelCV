@@ -7,7 +7,7 @@ data class ExperienceDto(
     @SerializedName("company")
     val company: String?,
     @SerializedName("endDate")
-    val endDate: Any?,
+    val endDate: String?,
     @SerializedName("id")
     val id: Int?,
     @SerializedName("jobDescription")

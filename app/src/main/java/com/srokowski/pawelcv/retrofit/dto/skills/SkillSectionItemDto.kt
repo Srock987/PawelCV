@@ -3,7 +3,7 @@ package com.srokowski.pawelcv.retrofit.dto.skills
 
 import com.google.gson.annotations.SerializedName
 
-data class SectionItemDto(
+data class SkillSectionItemDto(
     @SerializedName("id")
     val id: Int?,
     @SerializedName("item")

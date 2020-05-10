@@ -8,7 +8,7 @@ data class CvDataDto(
     @SerializedName("address")
     val address: String?,
     @SerializedName("applications")
-    val applications: List<ApplicationDto>?,
+    val applications: List<ApplicationItemDto>?,
     @SerializedName("education")
     val education: List<EducationDto>?,
     @SerializedName("email")

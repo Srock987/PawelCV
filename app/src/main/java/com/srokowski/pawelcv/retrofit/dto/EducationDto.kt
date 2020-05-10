@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class EducationDto(
     @SerializedName("endDate")
-    val endDate: Any?,
+    val endDate: String?,
     @SerializedName("faculty")
     val faculty: String?,
     @SerializedName("id")

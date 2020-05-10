@@ -10,5 +10,5 @@ data class SkillsDto(
     @SerializedName("programmingSkills")
     val programmingSkills: List<ProgrammingSkillDto>?,
     @SerializedName("sections")
-    val sections: List<SectionDto>?
+    val sections: List<SkillSectionDto>?
 )
