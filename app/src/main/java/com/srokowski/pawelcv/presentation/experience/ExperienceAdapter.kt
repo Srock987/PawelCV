@@ -45,7 +45,7 @@ class ExperienceAdapter : RecyclerView.Adapter<ExperienceAdapter.ExperienceViewH
 
         override fun onBind(data: Experience) {
             with(data) {
-                itemView.dateTextView.text = itemView.context.getString(R.string.experience_date, startDate, endDate ?: CURRENT_DATE)
+                itemView.dateTextView.text = itemView.context.getString(R.string.range_date, startDate, endDate ?: CURRENT_DATE)
                 itemView.companyTextView.text = data.company
                 itemView.jobTitleTextView.text = data.jobTitle
                 itemView.jobDescription.text = data.jobDescription

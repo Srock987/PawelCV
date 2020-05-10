@@ -3,6 +3,7 @@ package com.srokowski.pawelcv.di
 import androidx.lifecycle.ViewModelProvider
 import com.srokowski.pawelcv.presentation.shared.CvModel
 import com.srokowski.pawelcv.presentation.shared.CvSharedViewModel
+import com.srokowski.pawelcv.presentation.skill.SkillViewDataItemFactory
 import org.kodein.di.Kodein
 import org.kodein.di.direct
 import org.kodein.di.generic.bind
@@ -20,9 +21,12 @@ val presentationModule = Kodein.Module("PresentationModule"){
         )
     }
 
+    bind<SkillViewDataItemFactory>() with provider { SkillViewDataItemFactory() }
+
     bindViewModel<CvSharedViewModel>() with provider {
         CvSharedViewModel(
-            model = instance()
+            model = instance(),
+            skillsFactory = instance()
         )
     }
 }

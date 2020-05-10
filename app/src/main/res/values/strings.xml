@@ -4,9 +4,14 @@
     <string name="experience">Experience</string>
     <string name="skills">Skills</string>
     <string name="education">Education</string>
-    <string name="experience_date">%1$s \n - \n %2$s</string>
+    <string name="range_date">%1$s \n - \n %2$s</string>
     <string name="example_date">04.2018 \n - \n 02.2019</string>
     <string name="example_company">ABB</string>
     <string name="example_job_title">Android Developer</string>
     <string name="exmple_job_description">Core role was native android development. I was also involved in implementation of native iOS applications as well as cross platform framework - Flutter. The methodology of work consisted of test driven development, frequent code reviews and agile-based team cooperation.</string>
+    <string name="example_faculty">Computer Science</string>
+    <string name="agh_university_of_science_and_technology">AGH University of Science and Technology</string>
+    <string name="example_skill">Kotlin</string>
+    <string name="exmaple_header">Programming Skills</string>
+    <string name="example_skill_level">Advanced</string>
 </resources>

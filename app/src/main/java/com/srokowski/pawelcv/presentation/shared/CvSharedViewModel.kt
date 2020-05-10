@@ -3,12 +3,16 @@ package com.srokowski.pawelcv.presentation.shared
 import android.util.Log
 import androidx.lifecycle.*
 import com.srokowski.pawelcv.data.entities.CvData
+import com.srokowski.pawelcv.data.entities.Education
 import com.srokowski.pawelcv.data.entities.Experience
+import com.srokowski.pawelcv.presentation.skill.SkillViewDataItemFactory
+import com.srokowski.pawelcv.presentation.skill.SkillViewData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class CvSharedViewModel(
-    private val model: CvModelContract.Model
+    private val model: CvModelContract.Model,
+    private val skillsFactory: SkillViewDataItemFactory
 ): ViewModel() {
 
     private val cvData by lazy {
@@ -21,6 +25,14 @@ class CvSharedViewModel(
 
     fun getExperience(): LiveData<List<Experience>> {
         return Transformations.map(cvData){ data -> data.experience }
+    }
+
+    fun getEducation(): LiveData<List<Education>>{
+        return Transformations.map(cvData){ data -> data.education}
+    }
+
+    fun getSkillViewData(): LiveData<List<SkillViewData>>{
+        return Transformations.map(cvData){ data -> skillsFactory.create(data.skills) }
     }
 
     private fun fetchCvData(){
