@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "cvDataEntity")
+@Entity(tableName = "cvData")
 data class CvDataEntity(
     @PrimaryKey
     @ColumnInfo(name = "id")
