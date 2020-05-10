@@ -22,7 +22,10 @@ val dataModule = Kodein.Module("DataModule"){
     }
 
     bind<CvLocalDataSource>() with provider {
-        CvRoomDataSource()
+        CvRoomDataSource(
+            dao = instance(),
+            mapper = instance()
+        )
     }
 
     bind<CvDataRepository>() with provider {

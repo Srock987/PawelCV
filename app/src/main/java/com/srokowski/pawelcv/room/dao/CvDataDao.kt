@@ -28,13 +28,23 @@ interface CvDataDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertApplication(vararg applicationEntity: ApplicationEntity)
 
+    @Query("SELECT * FROM language")
+    fun getLanguages(): List<LanguageEntity>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertLanguages(vararg languageEntity: LanguageEntity)
+
+    @Query("SELECT * FROM programmingSkills")
+    fun getProgrammingSkills(): List<ProgrammingSkillsEntity>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertProgrammingSkills(vararg programmingSkillsEntity: ProgrammingSkillsEntity)
+
     @Query("SELECT * FROM skillSection")
     fun getSections(): List<SkillSectionEntity>
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertSection(vararg sectionEntity: SkillSectionEntity)
 
-    @Query("SELECT * FROM skillSectionItem")
-    fun getSectionItem(): List<SkillSectionItemEntity>
+    @Query("SELECT * FROM skillSectionItem WHERE sectionId=:sectionId")
+    fun getSectionItem(sectionId: Int): List<SkillSectionItemEntity>
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertSectionItems(vararg sectionItemEntity: SkillSectionItemEntity)
 }

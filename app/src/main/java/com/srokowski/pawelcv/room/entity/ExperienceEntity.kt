@@ -18,5 +18,5 @@ data class ExperienceEntity(
     @ColumnInfo(name = "startDate")
     val startDate: String,
     @ColumnInfo(name = "endDate")
-    val endDate: String
+    val endDate: String?
 )

@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.srokowski.pawelcv.room.dao.CvDataDao
 import com.srokowski.pawelcv.room.entity.*
 
 @Database(
@@ -21,6 +22,7 @@ import com.srokowski.pawelcv.room.entity.*
 )
 abstract class CvDatabase: RoomDatabase() {
 
+    abstract fun cvDataDao(): CvDataDao
 
     companion object {
         @Volatile
