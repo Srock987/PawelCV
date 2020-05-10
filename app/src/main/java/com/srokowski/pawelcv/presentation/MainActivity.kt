@@ -1,7 +1,8 @@
-package com.srokowski.pawelcv
+package com.srokowski.pawelcv.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.srokowski.pawelcv.R
 
 class MainActivity : AppCompatActivity() {
 
