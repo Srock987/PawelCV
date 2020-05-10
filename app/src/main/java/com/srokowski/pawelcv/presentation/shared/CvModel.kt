@@ -1,4 +1,4 @@
-package com.srokowski.pawelcv.presentation
+package com.srokowski.pawelcv.presentation.shared
 
 import com.srokowski.pawelcv.data.entities.CvData
 import com.srokowski.pawelcv.data.repositories.CvDataRepository

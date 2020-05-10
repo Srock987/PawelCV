@@ -1,4 +1,4 @@
-package com.srokowski.pawelcv.presentation
+package com.srokowski.pawelcv.presentation.shared
 
 import androidx.lifecycle.LiveData
 import com.srokowski.pawelcv.data.entities.CvData

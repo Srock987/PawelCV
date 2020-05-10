@@ -3,6 +3,7 @@ package com.srokowski.pawelcv.di
 import com.google.gson.Gson
 import com.srokowski.pawelcv.data.dataSources.CvLocalDataSource
 import com.srokowski.pawelcv.data.dataSources.CvRemoteDataSource
+import com.srokowski.pawelcv.data.dataSources.SharedPreferencesIdStorage
 import com.srokowski.pawelcv.data.repositories.CvDataRepository
 import com.srokowski.pawelcv.retrofit.dto.dataSources.CvRetrofitDataSource
 import com.srokowski.pawelcv.room.dataSource.CvRoomDataSource
@@ -29,10 +30,17 @@ val dataModule = Kodein.Module("DataModule"){
         )
     }
 
+    bind<SharedPreferencesIdStorage>() with provider {
+        SharedPreferencesIdStorage(
+            context = instance()
+        )
+    }
+
     bind<CvDataRepository>() with provider {
         CvDataRepository(
             local = instance(),
-            remote = instance()
+            remote = instance(),
+            idStorage = instance()
         )
     }
 }

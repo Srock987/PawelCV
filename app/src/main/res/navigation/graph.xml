@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/graph"
+    app:startDestination="@id/contact_info_item">
+
+    <fragment
+        android:id="@+id/contact_info_item"
+        android:name="com.srokowski.pawelcv.presentation.info.InfoFragment"
+        android:label="@string/info" />
+
+    <fragment
+        android:id="@+id/experience_item"
+        android:name="com.srokowski.pawelcv.presentation.experience.ExperienceFragment"
+        android:label="@string/experience" />
+    <fragment
+        android:id="@+id/skills_item"
+        android:name="com.srokowski.pawelcv.presentation.skill.SkillFragment"
+        android:label="@string/skills" />
+    <fragment
+        android:id="@+id/education_item"
+        android:name="com.srokowski.pawelcv.presentation.education.EducationFragment"
+        android:label="@string/education" />
+
+
+</navigation>
