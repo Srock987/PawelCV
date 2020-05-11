@@ -7,7 +7,7 @@ import com.srokowski.pawelcv.retrofit.dto.skills.SkillSectionDto
 import com.srokowski.pawelcv.retrofit.dto.skills.SkillSectionItemDto
 import com.srokowski.pawelcv.retrofit.dto.skills.SkillsDto
 
-class CvDataRetorfitMapper(
+class CvDataRetrofitMapper(
     private val validator: CvDataDtoValidator
 ) {
     fun mapToData(dto: CvDataDto) = with(dto) {
