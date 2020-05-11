@@ -17,10 +17,12 @@ abstract class BaseRepository {
             }
             val remote = getRemote()
             if (isValidData(remote) && remote != null) {
-                emit(Result.success(remote))
-                casheRemoteData(remote)
+                if (remote != local) {
+                    emit(Result.success(remote))
+                    casheRemoteData(remote)
+                }
             } else {
-                emit(Result.failure(NetworkException()))
+                emit(Result.failure(NetworkException))
             }
         } catch (exception: Exception){
             emit(Result.failure(exception))
@@ -28,4 +30,4 @@ abstract class BaseRepository {
     }
 }
 
-class NetworkException: Exception("Couldn't connect to server")
+object NetworkException: Exception("Couldn't connect to server")

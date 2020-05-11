@@ -101,7 +101,7 @@ class CvDataRetorfitMapper(
     }
 
     private fun mapApplication(applicationDto: ApplicationItemDto) = with(applicationDto) {
-        if (validator.applicationValid(this)){
+        if (validator.isApplicationValid(this)){
             ApplicationItem(
                 id!!,
                 name!!,

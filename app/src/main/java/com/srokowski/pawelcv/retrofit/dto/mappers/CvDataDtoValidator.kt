@@ -95,7 +95,7 @@ class CvDataDtoValidator {
         }
     }
 
-    fun applicationValid(applicationItemDto: ApplicationItemDto): Boolean {
+    fun isApplicationValid(applicationItemDto: ApplicationItemDto): Boolean {
         return try {
             checkNotNull(applicationItemDto.id)
             checkNotNull(applicationItemDto.name)
